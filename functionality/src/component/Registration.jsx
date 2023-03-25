@@ -52,6 +52,8 @@ function Registration() {
         //    console.log(e.target.name, e.target.value);
     }
 
+    
+
     return (
         <div>
             <form onSubmit={(e) => Register(e)}>

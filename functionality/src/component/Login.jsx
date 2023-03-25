@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function Login() {
 
     const [loginData, setloginData] = useState({ email: "", password: "" });
     // console.log(loginData, "loginData")
+
+    const route = useNavigate();
 
 
     function click(e) {
@@ -29,6 +32,7 @@ function Login() {
             currentuser ["currentuseremail"] = loginData.email;
             console.log(currentuser, "currentuser")
             localStorage.setItem("user", JSON.stringify(currentuser));
+            route('/');
             alert("login successfully")
         }
         else{
